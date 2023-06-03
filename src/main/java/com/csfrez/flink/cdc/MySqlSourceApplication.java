@@ -1,7 +1,7 @@
 package com.csfrez.flink.cdc;
 
-import com.alibaba.ververica.cdc.connectors.mysql.MySQLSource;
-import com.alibaba.ververica.cdc.connectors.mysql.table.StartupOptions;
+import com.ververica.cdc.connectors.mysql.MySqlSource;
+import com.ververica.cdc.connectors.mysql.table.StartupOptions;
 import com.csfrez.flink.cdc.bean.StatementBean;
 import com.csfrez.flink.cdc.config.SourceConfig;
 import com.csfrez.flink.cdc.config.TableConfig;
@@ -65,7 +65,7 @@ public class MySqlSourceApplication {
 
             Properties properties = new Properties();
             properties.setProperty("snapshot.mode", "schema_only");
-            SourceFunction<String> sourceFunction = MySQLSource.<String>builder()
+            SourceFunction<String> sourceFunction = MySqlSource.<String>builder()
                     .hostname(sourceConfig.getHostname())
 //                    .serverTimeZone("Europe/London")
                     .port(sourceConfig.getPort())

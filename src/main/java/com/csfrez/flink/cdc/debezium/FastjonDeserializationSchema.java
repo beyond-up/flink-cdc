@@ -1,7 +1,7 @@
 package com.csfrez.flink.cdc.debezium;
 
 import com.alibaba.fastjson.JSONObject;
-import com.alibaba.ververica.cdc.debezium.DebeziumDeserializationSchema;
+import com.ververica.cdc.debezium.DebeziumDeserializationSchema;
 import io.debezium.time.Timestamp;
 import org.apache.flink.api.common.typeinfo.BasicTypeInfo;
 import org.apache.flink.api.common.typeinfo.TypeInformation;
